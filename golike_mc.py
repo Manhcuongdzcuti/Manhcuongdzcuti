@@ -31,7 +31,7 @@ BANNER = """
 \033[1;32mTools               :  Golike Tiktok Auto Click
 \033[1;0mMua Paid Key Tại    :  https://cardso1vn.x10.mx/add_key.php
 \033[1;0mVersion             :  3.2.7 (Secure)
-\033[1;33mMomo/Mb.           :  0859652100(Momo) - 666080629(MB)
+\033[1;33mMomo/Mb             :  0859652100(Momo) - 666080629(MB)
 \033[1;31mVui Lòng Tham Gia Box Zalo Để Admin Tiện Cho Việc Hỗ Trợ Các Lỗi!
 \033[1;32m════════════════════════════════════════════════════════════
 """
