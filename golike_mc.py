@@ -303,7 +303,7 @@ def main():
     paid_key = load_paid_key()
     if paid_key and check_paid_key(paid_key):
         days = paid_key_days_left(paid_key)
-        print(f"✅ Paid Key hợp lệ. Còn {days} ngày sử dụng.")
+        print(f"\033[1;32mPaid Key hợp lệ. Còn \033[1;33m{days} \033[1;32mngày sử dụng.")
         run_golike_tool_with_watchdog()
         return
 
@@ -312,12 +312,12 @@ def main():
     if free_key_data and check_free_key(free_key_data):
         delta = time_left_free(free_key_data)
         h, m = divmod(delta.seconds, 3600)[0], (delta.seconds // 60) % 60
-        print(f"✅ Free Key hợp lệ. Còn {h} giờ {m} phút sử dụng.")
+        print(f"\033[1;32mFree Key hợp lệ. Còn \033[1;33m{h} \033[1;32mgiờ \033[1;33m{m} \033[1;32mphút sử dụng.")
         run_golike_tool_with_watchdog()
         return
 
     # 4) Nếu không có key hợp lệ thì bắt nhập
-    print("=== Chọn chế độ sử dụng tool ===")
+    print(gl_mc+"\033[1;32mVui Lòng Chọn Loại Key")
     print(gl_mc+"\033[1;32mChọn [\033[1;33m1\033[1;32m] Free (vượt link nhiệm vụ để lấy key)")
     print(gl_mc+"\033[1;32mChọn [\033[1;33m2\033[1;32m Paid (key mua từ server)")
     choice = input(gl_mc1+"\033[1;32mVui Lòng Nhập Lựa Chọn: ").strip()
