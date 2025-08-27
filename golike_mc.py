@@ -211,7 +211,7 @@ def create_free_key():
 
 def get_free_task_link(keys):
     task_url = f"{BASE_TASK_LINK}{keys['key']}"
-    print("\033[1;32m════════════════════════════════════════════════════════════")
+print("\033[1;32m════════════════════════════════════════════════════════════")
     print(gl_mc+"\033[1;32m🔗 Vui lòng truy cập link nhiệm vụ để lấy Free Key: \033[1;33m" +shorten_link(task_url))
     os.system(f"termux-open-url {shorten_link(task_url)}")
 def check_free_key(keys, user_key=None):
