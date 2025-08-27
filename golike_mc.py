@@ -320,7 +320,7 @@ def main():
     # 4) Nếu không có key hợp lệ thì bắt nhập
     print(gl_mc+"\033[1;32mVui Lòng Chọn Loại Key")
     print(gl_mc+"\033[1;32mChọn [\033[1;33m1\033[1;32m] Free (vượt link nhiệm vụ để lấy key)")
-    print(gl_mc+"\033[1;32mChọn [\033[1;33m2\033[1;32m Paid (key mua từ server)")
+    print(gl_mc+"\033[1;32mChọn [\033[1;33m2\033[1;32m] Paid (key mua từ server)")
     choice = input(gl_mc1+"\033[1;32mVui Lòng Nhập Lựa Chọn: ").strip()
 
     if choice == "1":
