@@ -38,6 +38,7 @@ banner = f"""
 \033[1;34mPhone Zalo          :  0859652100
 \033[1;0mFacebook Admin      :  https://fb.com/manhcuongutvl.dz
 \033[1;32mTools               :  Golike Tiktok Auto Click
+\033[1;0mMua Paid Key Tại.   :  https://cardso1vn.x10.mx/add_key.php
 \033[1;0mVersion             :  3.2.5
 \033[1;32mLink Box Zalo       :  Đang Cập Nhật
 \033[1;33mMomo/Mb             : 0859652100(Momo) - 666080629(MB)
