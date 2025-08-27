@@ -318,42 +318,42 @@ def main():
 
     # 4) Nếu không có key hợp lệ thì bắt nhập
     print("=== Chọn chế độ sử dụng tool ===")
-    print("1️⃣ Free (vượt link nhiệm vụ để lấy key)")
-    print("2️⃣ Paid (key mua từ server)")
-    choice = input("Chọn 1 hoặc 2: ").strip()
+    print(gl_mc+"\033[1;32mChọn [\033[1;33m1\033[1;32m] Free (vượt link nhiệm vụ để lấy key)")
+    print(gl_mc+"\033[1;32mChọn [\033[1;33m2\033[1;32m Paid (key mua từ server)")
+    choice = input(gl_mc1+"\033[1;32mVui Lòng Nhập Lựa Chọn: ").strip()
 
     if choice == "1":
         keys = create_free_key()
         get_free_task_link(keys)
         while True:
-            user_key = input("Nhập Free Key sau khi hoàn thành nhiệm vụ: ").strip()
+            user_key = input(gl_mc1+"\033[1;32mNhập \033[1;33mFree Key \033[1;32mSau Khi Hoàn Thành Nhiệm Vụ: ").strip()
             if check_free_key(keys, user_key):
                 save_json(FREE_KEY_FILE, keys)
                 delta = time_left_free(keys)
                 h, m = divmod(delta.seconds, 3600)[0], (delta.seconds // 60) % 60
-                print(f"✅ Free Key hợp lệ. Còn {h} giờ {m} phút sử dụng.")
+                print(f"\033[1;32m Free Key hợp lệ. Còn \033[1;33m{h} giờ \033[1;33m{m} phút \033[1;32msử dụng.")
                 sleep(1)
                 run_golike_tool_with_watchdog()
                 break
             else:
-                print("❌ Key không hợp lệ! Vui lòng nhập lại.")
+                print("\033[1;31m Key không hợp lệ! Vui lòng nhập lại.")
     elif choice == "2":
         while True:
-            key = input("Nhập Paid Key của bạn: ").strip()
+            key = input(gl_mc1+"\033[1;32mNhập \033[1;33mPaid Key \033[1;32mCủa Bạn: ").strip()
             if check_paid_key(key):
                 save_paid_key(key)
                 days = paid_key_days_left(key)
-                print(f"✅ Paid Key hợp lệ. Còn {days} ngày sử dụng.")
+                print(f"\033[1;33mPaid Key \033[1;32mhợp lệ. Còn \033[1;33m{days} ngày \033[1;32msử dụng.")
                 sleep(1)
                 run_golike_tool_with_watchdog()
                 break
             else:
-                print("❌ Paid Key không hợp lệ! Vui lòng nhập lại.")
+                print("\033[1;31mPaid Key không hợp lệ! Vui lòng nhập lại.")
     else:
-        print("❌ Lựa chọn không hợp lệ.")
+        print("\033[1;31mLựa chọn không hợp lệ.")
 
 if __name__ == "__main__":
     try:
         main() 
     except KeyboardInterrupt:
-        print("\n🚪 Thoát tool.")
+        print("\033[1;31mThoát tool.")
