@@ -47,9 +47,9 @@ banner = f"""
 """
 os.system('cls' if os.name== 'nt' else 'clear')
 print(banner)
-print("\033[1;33m╔═════════════════════════╗")
-print("\033[1;33m║  \033[1;32mĐĂNG NHẬP GOLIKE AUTH  \033[1;33m║")
-print("\033[1;33m╚═════════════════════════╝") 
+print("\033[1;32m╔═════════════════════════╗")
+print("\033[1;32m║  \033[1;33mĐĂNG NHẬP GOLIKE AUTH  \033[1;32m║")
+print("\033[1;32m╚═════════════════════════╝") 
 
     # Nhập auth
 try:
@@ -84,9 +84,9 @@ Authorization.close()
 t.close()
 os.system('cls' if os.name== 'nt' else 'clear')
 print(banner)
-print("\033[1;33m╔════════════════════════════════════════════╗")
-print("\033[1;33m║   \033[1;32mDANH SÁCH ACC TIKTOK TRONG ACC GOLIKE    \033[1;33m║")
-print("\033[1;33m╚════════════════════════════════════════════╝")  
+print("\033[1;32m╔════════════════════════════════════════════╗")
+print("\033[1;32m║   \033[1;33mDANH SÁCH ACC TIKTOK TRONG ACC GOLIKE    \033[1;32m║")
+print("\033[1;32m╚════════════════════════════════════════════╝")  
 headers = {
     'Accept': 'application/json, text/plain, */*',
     'Content-Type': 'application/json;charset=utf-8',
@@ -184,7 +184,7 @@ def dsacc():
   for i in range(len(chontktiktok["data"])):
     print(gl_mc + f'\033[1;32m[\033[1;33m{i+1}\033[1;32m] \033[1;32mTikTok \033[1;33m| \033[1;93m {chontktiktok["data"][i]["nickname"]} \033[1;33m|\033[1;31m\033[1;32m Online')
 dsacc() 
-print(f"\033[1;33m═══════════════════════════════════")
+print(f"\033[1;32m═══════════════════════════════════")
 while True:
   try:
     luachon = int(input("\033[1;0m==> \033[1;32mChọn tài khoản \033[1;33mTIKTOK \033[1;32mbạn muốn chạy: \033[1;33m"))
@@ -206,9 +206,9 @@ while True:
     break
   except:
     print(gl_mc + "\033[1;31mNhập Vào 1 Số")  
-print("\033[1;33m╔═══════════════╗")
-print("\033[1;33m║  \033[1;32m  CHỌN NV    \033[1;33m║")
-print("\033[1;33m╚═══════════════╝")
+print("\033[1;32m╔═══════════════╗")
+print("\033[1;32m║  \033[1;33m  CHỌN NV    \033[1;32m║")
+print("\033[1;32m╚═══════════════╝")
 print(gl_mc + "\033[1;32m[\033[1;33m1\033[1;32m] NV Follow")
 print(gl_mc + "\033[1;32m[\033[1;33m2\033[1;32m] NV Like")
 print(gl_mc + "\033[1;32m[\033[1;33m3\033[1;32m] Cả hai NV (Follow và Like)")
@@ -224,9 +224,9 @@ while True:
         print(gl_mc + "\033[1;31mSai định dạng! Vui lòng nhập số.")  
 
 x_like, y_like, x_follow, y_follow = None, None, None, None
-print("\033[1;33m╔═══════╗")
-print("\033[1;33m║  \033[1;32mADB  \033[1;33m║")
-print("\033[1;33m╚═══════╝")
+print("\033[1;32m╔═══════╗")
+print("\033[1;32m║  \033[1;33mADB  \033[1;32m║")
+print("\033[1;32m╚═══════╝")
 print(gl_mc + f"\033[1;32m[\033[1;33m1\033[1;32m] Sử dụng (Trên ADR11)")
 print(gl_mc + f"\033[1;32m[\033[1;33m2\033[1;32m] Không dùng,chỉ auto cilck ")
 adbyn = input(f"\033[1;0m==> \033[1;32mNhập lựa chọn: \033[1;33m")
@@ -238,7 +238,7 @@ if adbyn == "1":
       follow_coords_file = "toa_do_follow.txt"
 
     # Nhập IP và port ADB
-      print(gl_mc + f"\033[1;33m═══════════════════════════════════")
+      print(gl_mc + f"\033[1;32m═══════════════════════════════════")
       print(gl_mc + "\033[1;32mBạn có thể xem video hướng dẫn kết nối ADB ở trên Youtube!!! ")
       ip = input("\033[1;0m==> \033[1;32mNhập IP của thiết bị ví dụ (192.168.1.2): \033[1;33m")
       adb_port = input("\033[1;0m==> \033[1;32mNhập port của thiết bị ví dụ (39327): \033[1;33m")
@@ -270,11 +270,11 @@ if adbyn == "1":
           with open(config_file, "r") as f:
                pair_code, pair_port = [s.strip() for s in f.read().split("|")]
   
-      print(gl_mc + "\n\033[1;36m Đang ghép nối với thiết bị\033[0m")
+      print(gl_mc + "\n\033[1;32m Đang ghép nối với thiết bị\033[0m")
       os.system(f"adb pair {ip}:{pair_port} {pair_code}")
       time.sleep(2)
   
-      print(gl_mc + "\033[1;36mĐang kết nối ADB\033[0m")
+      print(gl_mc + "\033[1;32mĐang kết nối ADB\033[0m")
       os.system(f"adb connect {ip}:{adb_port}")
       time.sleep(2)
   
@@ -285,9 +285,9 @@ if adbyn == "1":
     
 
        # Yêu cầu nhập tọa độ nếu chưa có
-      print(gl_mc + "\033[1;39m╔═════════════════════════════════╗")
-      print(gl_mc + "\033[1;39m║     \033[1;36m NHẬP TỌA ĐỘ        \033[1;39m║")
-      print(gl_mc + "\033[1;39m╚═════════════════════════════════╝")
+      print(gl_mc + "\033[1;32m╔═════════════════════════════════╗")
+      print(gl_mc + "\033[1;32m║     \033[1;33m NHẬP TỌA ĐỘ        \033[1;32m║")
+      print(gl_mc + "\033[1;32m╚═════════════════════════════════╝")
     
       if loai_nhiem_vu in [1, 3] and (x_follow is None or y_follow is None):
            x_follow = input("\033[1;32mNhập tọa độ X của nút follow: \033[1;33m")
@@ -399,7 +399,7 @@ while True:
 
     # Đếm ngược delay
     for remaining_time in range(delay, -1, -1):
-        color = "\033[1;36m" if remaining_time % 2 == 0 else "\033[1;33m"
+        color = "\033[1;32m" if remaining_time % 2 == 0 else "\033[1;33m"
         print(f"\r{color} C-Tool - Tool Vip| {remaining_time}s           ", end="")
         time.sleep(1)
     
