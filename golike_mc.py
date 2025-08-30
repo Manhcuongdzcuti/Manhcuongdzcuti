@@ -42,7 +42,7 @@ PAID_KEY_FILE = "paid_key.txt"
 PAID_KEY_URL  = "https://cardso1vn.x10.mx/Key.json"
 LINK4M_API_KEY = "65b5f29631fc8733e718dca9"
 BASE_TASK_LINK = "https://key.com/task?id="
-GOLIKE_TOOL_URL = "https://raw.githubusercontent.com/Manhcuongdzcuti/Manhcuongdzcuti/refs/heads/main/tiktok_golikemc.py"
+GOLIKE_TOOL_URL = "https://raw.githubusercontent.com/manhcuongsieucute2k9-lang/Golikemcne/refs/heads/main/main.py"
 
 DEVLOG_URL = "https://https://cardso1vn.x10.mx/devlog.php"  # server nhận log
 PING_URLS = ("https://google.com", "https://cloudflare.com")
