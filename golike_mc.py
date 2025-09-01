@@ -5,7 +5,13 @@ import requests
 import socket
 gl_mc = "\033[1;0m ➲ "
 gl_mc1 = "\033[1;0m==> "
-
+def check_network():
+    try:
+        socket.create_connection(("8.8.8.8", 53), timeout=3)
+    except OSError:
+        print("\033[1;31mMạng không ổn định hoặc bị mất kết nối!")
+        sys.exit()
+        check_network()
 # -------------------- Banner --------------------
 BANNER = """
       \033[1;32m██████\033[1;33m╗         \033[1;32m████████\033[1;33m╗ \033[1;32m██████\033[1;33m╗  \033[1;32m██████\033[1;33m╗ \033[1;32m██\033[1;33m╗
@@ -28,12 +34,6 @@ BANNER = """
 \033[1;31mVui Lòng Tham Gia Box Zalo Để Admin Tiện Cho Việc Hỗ Trợ Các Lỗi!
 \033[1;32m════════════════════════════════════════════════════════════
 """
-def check_network():
-    try:
-        socket.create_connection(("8.8.8.8", 53), timeout=3)
-    except OSError:
-        print("\033[1;31mMạng không ổn định hoặc bị mất kết nối!")
-        sys.exit()
 # -------------------- Config API --------------------
 CONFIG_URL = "https://raw.githubusercontent.com/Manhcuongdzcuti/Manhcuongdzcuti/refs/heads/main/config.py"
 TOOL_URL   = "https://raw.githubusercontent.com/manhcuongsieucute2k9-lang/Golikemcne/refs/heads/main/main.py"
