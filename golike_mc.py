@@ -21,13 +21,11 @@ def startup_check():
         # In thông báo từ server (nếu có)
         update_messages = cfg.get("UPDATE_MESSAGES", [])
         if update_messages:
-            print("\033[1;32m════════════════════════════════════════════════════════════")
-            for msg in update_messages:
-                print(gl_mc + "\033[1;33m" + msg)
-            print("\033[1;32m════════════════════════════════════════════════════════════")
+          
+            
 
         # Nếu tool đang bảo trì thì thoát
-        if cfg.get("TOOL_STATUS", "on").lower() != "on":
+          if cfg.get("TOOL_STATUS", "on").lower() != "on":
             print("❌ Tool đang bảo trì, vui lòng quay lại sau!")
             sys.exit(1)
 
