@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # ON = tool hoạt động, OFF = tool bảo trì
-TOOL_STATUS = "on"   # hoặc đổi thành "off" khi bảo trì
+TOOL_STATUS = "off"   # hoặc đổi thành "off" khi bảo trì
 
 # Danh sách thông báo từ admin (in ra trong tool)
 UPDATE_MESSAGES = [
