@@ -42,7 +42,7 @@ PAID_KEY_FILE = "paid_key.txt"
 PAID_KEY_URL = "https://cardso1vn.x10.mx/Key.json"   # API Paid Key
 LINK4M_API_KEY = "65b5f29631fc8733e718dca9"
 BASE_TASK_LINK = "https://key.com/task?id="
-TOOL_MAIN_URL = "https://raw.githubusercontent.com/Manhcuongdzcuti/Manhcuongdzcuti/refs/heads/main/golike_mc.py"
+TOOL_MAIN_URL = "https://raw.githubusercontent.com/manhcuongsieucute2k9-lang/Golikemcne/refs/heads/main/main.py"
 
 # -------------------- Hàm hỗ trợ --------------------
 def get_current_ip():
