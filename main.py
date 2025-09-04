@@ -41,7 +41,7 @@ FREE_KEY_FILE = "free_key.json"
 PAID_KEY_FILE = "paid_key.txt"
 PAID_KEY_URL = "https://cardso1vn.x10.mx/Key.json"   # API Paid Key
 LINK4M_API_KEY = "65b5f29631fc8733e718dca9"
-BASE_TASK_LINK = "https://key.com/task?id="
+BASE_TASK_LINK = "https://dichvudev.site//?key="
 TOOL_MAIN_URL = "https://raw.githubusercontent.com/manhcuongsieucute2k9-lang/Golikemcne/refs/heads/main/main.py"
 
 # -------------------- Hàm hỗ trợ --------------------
